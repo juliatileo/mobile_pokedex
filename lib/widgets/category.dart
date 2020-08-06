@@ -4,8 +4,9 @@ class Categories extends StatelessWidget {
   final Color color;
   final String imageUrl;
   final String categoryTitle;
+  final Function navigateTo;
 
-  Categories({this.color, this.imageUrl, this.categoryTitle});
+  Categories({this.color, this.imageUrl, this.categoryTitle, this.navigateTo});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class Categories extends StatelessWidget {
         child: Material(
           color: this.color,
           child: InkWell(
-            onTap: () {},
+            onTap: this.navigateTo,
             child: Container(
                 height: 300,
                 width: 300,

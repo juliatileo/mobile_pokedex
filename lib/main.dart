@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import './themes/theme_data.dart';
-import './components/drawer.dart';
-import './components/category.dart';
+import 'widgets/drawer.dart';
+import 'widgets/category.dart';
+import 'screens/pokemons.dart';
+import 'screens/berries.dart';
+import 'screens/moves.dart';
+import 'screens/itens.dart';
 
 void main() {
   runApp(MyApp());
@@ -75,27 +79,35 @@ class _PokedexState extends State<Pokedex> {
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
                           Categories(
-                            color: Color(0xffcf305a),
-                            imageUrl:
-                                'https://lh3.googleusercontent.com/proxy/qc4Nbw145QDyyiOZZGtjCLadA4xNsa-u2T2qHXr-E8xxyt3FkP6fIfEo8oiifD0OCizw1GcvSUzKUDHwYd8LWerwxpJArWpyUutN7WStQKiVgAZkAASGvx7StFuIezh32w',
-                            categoryTitle: 'Pokémons',
-                          ),
+                              color: Color(0xffcf305a),
+                              imageUrl:
+                                  'https://lh3.googleusercontent.com/proxy/qc4Nbw145QDyyiOZZGtjCLadA4xNsa-u2T2qHXr-E8xxyt3FkP6fIfEo8oiifD0OCizw1GcvSUzKUDHwYd8LWerwxpJArWpyUutN7WStQKiVgAZkAASGvx7StFuIezh32w',
+                              categoryTitle: 'Pokémons',
+                              navigateTo: () {
+                                Get.to(Pokemons());
+                              }),
                           Categories(
-                            color: Color(0xff7530cf),
-                            imageUrl: 'https://pokemonfaqs.com/wp-content/uploads/2020/04/enigma_berry.png',
-                            categoryTitle: 'Berries',
-                          ),
+                              color: Color(0xff7530cf),
+                              imageUrl: 'https://pokemonfaqs.com/wp-content/uploads/2020/04/enigma_berry.png',
+                              categoryTitle: 'Berries',
+                              navigateTo: () {
+                                Get.to(Berries());
+                              }),
                           Categories(
-                            color: Color(0xffe37452),
-                            imageUrl: 'https://image.flaticon.com/icons/png/512/35/35837.png',
-                            categoryTitle: 'Moves',
-                          ),
+                              color: Color(0xffe37452),
+                              imageUrl: 'https://image.flaticon.com/icons/png/512/35/35837.png',
+                              categoryTitle: 'Moves',
+                              navigateTo: () {
+                                Get.to(Moves());
+                              }),
                           Categories(
-                            color: Color(0xff3087cf),
-                            imageUrl:
-                                'https://static.wikia.nocookie.net/international-pokedex/images/9/9a/Macho_Brace.png/revision/latest/scale-to-width-down/340?cb=20190508182400',
-                            categoryTitle: 'Itens',
-                          )
+                              color: Color(0xff3087cf),
+                              imageUrl:
+                                  'https://static.wikia.nocookie.net/international-pokedex/images/9/9a/Macho_Brace.png/revision/latest/scale-to-width-down/340?cb=20190508182400',
+                              categoryTitle: 'Itens',
+                              navigateTo: () {
+                                Get.to(Itens());
+                              })
                         ],
                       ),
                     ),
