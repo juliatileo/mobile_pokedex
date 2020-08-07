@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import '../utils/pokemons_model.dart';
+import '../models/pokemons_model.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -33,5 +33,3 @@ class PokeApiController extends GetxController {
     });
   }
 }
-
-getSpecificPokemon(int id) {}

@@ -30,7 +30,11 @@ class Pokemons extends StatelessWidget {
                           var pokemon = ctx.pokemons.value[index];
                           return ListTile(
                             title: Text('${index + 1}. ${this.capitalize(pokemon.name)}'),
-                            onTap: () => Get.to(PokemonInfo(), arguments: [this.capitalize(pokemon.name), index + 1]),
+                            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                                builder: (_) => PokemonInfo(
+                                      pokeInfo: pokemon,
+                                      pokeId: index + 1,
+                                    ))),
                           );
                         },
                       ),
