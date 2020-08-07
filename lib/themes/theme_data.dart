@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Themes {
   static ThemeData dark = ThemeData(brightness: Brightness.dark, accentColor: Color(0xff333333));
-  static ThemeData light = ThemeData(brightness: Brightness.light, accentColor: Color(0xffe35274));
+  static ThemeData light = ThemeData(brightness: Brightness.light, accentColor: Color(0xffee1515));
 
   static assertTheme() async {
     SharedPreferences sharedTheme = await SharedPreferences.getInstance();

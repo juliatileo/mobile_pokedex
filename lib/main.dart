@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import './themes/theme_data.dart';
 import 'widgets/drawer.dart';
 import 'widgets/category.dart';
-import 'screens/pokemons.dart';
+import 'screens/pokemons/pokemons.dart';
 import 'screens/berries.dart';
 import 'screens/moves.dart';
 import 'screens/itens.dart';
@@ -81,7 +81,7 @@ class _PokedexState extends State<Pokedex> {
                           Categories(
                               color: Color(0xffcf305a),
                               imageUrl:
-                                  'https://lh3.googleusercontent.com/proxy/qc4Nbw145QDyyiOZZGtjCLadA4xNsa-u2T2qHXr-E8xxyt3FkP6fIfEo8oiifD0OCizw1GcvSUzKUDHwYd8LWerwxpJArWpyUutN7WStQKiVgAZkAASGvx7StFuIezh32w',
+                                  'https://lh4.googleusercontent.com/-I0RQsfGZA-E/AAAAAAAAAAI/AAAAAAAAA7A/AMZuuclsn97ZJ_n0Pj12N7RiQqHerB_6jA/s88/photo.jpg',
                               categoryTitle: 'Pokémons',
                               navigateTo: () {
                                 Get.to(Pokemons());
