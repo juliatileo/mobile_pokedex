@@ -1,6 +1,7 @@
 import './ability.dart';
 import './move.dart';
 import './sprites.dart';
+import './stat.dart';
 
 class SpecificPokemonModel {
   List<Ability> abilities;
@@ -9,6 +10,7 @@ class SpecificPokemonModel {
   int id;
   String name;
   Sprites sprites;
+  List<Stat> stats;
 
   SpecificPokemonModel({this.abilities, this.moves, this.height, this.id, this.name, this.sprites});
 
@@ -29,5 +31,11 @@ class SpecificPokemonModel {
     this.id = json['id'];
     this.name = json['name'];
     this.sprites = Sprites.fromJson(json['sprites']);
+    List<Stat> stats = [];
+    for (var s in json['stats']) {
+      Stat st = Stat.fromJson(s);
+      stats.add(st);
+    }
+    this.stats = stats;
   }
 }

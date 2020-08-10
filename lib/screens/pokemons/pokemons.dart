@@ -18,27 +18,19 @@ class Pokemons extends StatelessWidget {
           },
           builder: (ctx) {
             return ctx.pokemons.value != null
-                ? Container(
-                    child: NotificationListener<ScrollNotification>(
-                      onNotification: (scroll) {
-                        if (scroll.metrics.pixels == scroll.metrics.maxScrollExtent) ctx.getPokemons();
-                        return true;
-                      },
-                      child: ListView.builder(
-                        itemCount: ctx.pokemons.value.length,
-                        itemBuilder: (_, index) {
-                          var pokemon = ctx.pokemons.value[index];
-                          return ListTile(
-                            title: Text('${index + 1}. ${this.capitalize(pokemon.name)}'),
-                            onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                                builder: (_) => PokemonInfo(
-                                      pokeInfo: pokemon,
-                                      pokeId: index + 1,
-                                    ))),
-                          );
-                        },
-                      ),
-                    ),
+                ? ListView.builder(
+                    itemCount: ctx.pokemons.value.length,
+                    itemBuilder: (_, index) {
+                      var pokemon = ctx.pokemons.value[index];
+                      return ListTile(
+                        title: Text('${index + 1}. ${this.capitalize(pokemon.name)}'),
+                        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                            builder: (_) => PokemonInfo(
+                                  pokeInfo: pokemon,
+                                  pokeId: index + 1,
+                                ))),
+                      );
+                    },
                   )
                 : Center(
                     child: CircularProgressIndicator(

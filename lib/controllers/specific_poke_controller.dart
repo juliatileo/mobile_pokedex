@@ -8,6 +8,7 @@ class SpecificPokeController extends GetxController {
   Rx<SpecificPokemonModel> specificPokemon = Rx<SpecificPokemonModel>();
 
   getSpecificPokemon(int id) async {
+    this.clearSelectedPoke();
     SpecificPokemonModel specificPokemon;
     await http.get('https://pokeapi.co/api/v2/pokemon/$id').then((res) {
       if (res.statusCode == 200) {
@@ -17,5 +18,10 @@ class SpecificPokeController extends GetxController {
         update();
       }
     });
+  }
+
+  clearSelectedPoke() {
+    this.specificPokemon.value = null;
+    update();
   }
 }
