@@ -21,17 +21,17 @@ class StatIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(18),
+      margin: EdgeInsets.all(20),
       child: Row(children: <Widget>[
-        Container(width: 200, child: Text(this.statName)),
+        Container(width: 150, child: Text(this.statName)),
         Container(
           height: 20,
-          width: this.baseStat * 1.5,
+          width: this.baseStat >= 200 ? this.baseStat * 1.1 : this.baseStat * 1.5,
           decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: this.selectColor(this.baseStat)),
           child: Center(
             child: Text(
               this.baseStat.toStringAsFixed(0),
-              style: TextStyle(shadows: [Shadow(color: Colors.black, blurRadius: 2, offset: Offset(0, 1))]),
+              style: TextStyle(color: Colors.white, shadows: [Shadow(color: Colors.black, blurRadius: 2, offset: Offset(0, 1))]),
             ),
           ),
         )

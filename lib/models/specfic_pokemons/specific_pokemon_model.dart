@@ -2,17 +2,18 @@ import './ability.dart';
 import './move.dart';
 import './sprites.dart';
 import './stat.dart';
+import './type.dart';
 
 class SpecificPokemonModel {
   List<Ability> abilities;
   List<Move> moves;
-  int height;
   int id;
   String name;
   Sprites sprites;
   List<Stat> stats;
+  List<Type> types;
 
-  SpecificPokemonModel({this.abilities, this.moves, this.height, this.id, this.name, this.sprites});
+  SpecificPokemonModel({this.abilities, this.moves, this.id, this.name, this.sprites});
 
   SpecificPokemonModel.fromJson(Map<String, dynamic> json) {
     List<Ability> ability = [];
@@ -27,7 +28,6 @@ class SpecificPokemonModel {
       move.add(mo);
     }
     this.moves = move;
-    this.height = json['height'];
     this.id = json['id'];
     this.name = json['name'];
     this.sprites = Sprites.fromJson(json['sprites']);
@@ -37,5 +37,11 @@ class SpecificPokemonModel {
       stats.add(st);
     }
     this.stats = stats;
+    List<Type> types = [];
+    for (var t in json['types']) {
+      Type ty = Type.fromJson(t);
+      types.add(ty);
+    }
+    this.types = types;
   }
 }

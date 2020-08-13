@@ -3,8 +3,16 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Themes {
-  static ThemeData dark = ThemeData(brightness: Brightness.dark, accentColor: Color(0xff333333));
-  static ThemeData light = ThemeData(brightness: Brightness.light, accentColor: Color(0xffee1515));
+  static ThemeData dark = ThemeData(
+    brightness: Brightness.dark,
+    accentColor: Color(0xff333333),
+    secondaryHeaderColor: Color(0xff242424),
+  );
+  static ThemeData light = ThemeData(
+    brightness: Brightness.light,
+    accentColor: Color(0xffee1515),
+    secondaryHeaderColor: Color(0xfff0f0f0),
+  );
 
   static assertTheme() async {
     SharedPreferences sharedTheme = await SharedPreferences.getInstance();

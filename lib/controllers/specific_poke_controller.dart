@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 class SpecificPokeController extends GetxController {
   static SpecificPokeController get to => Get.find();
   Rx<SpecificPokemonModel> specificPokemon = Rx<SpecificPokemonModel>();
+  Rx<int> currentScreen = Rx<int>(0);
 
   getSpecificPokemon(int id) async {
     this.clearSelectedPoke();
@@ -22,6 +23,11 @@ class SpecificPokeController extends GetxController {
 
   clearSelectedPoke() {
     this.specificPokemon.value = null;
+    update();
+  }
+
+  updateScreen(int screen) {
+    this.currentScreen.value = screen;
     update();
   }
 }
