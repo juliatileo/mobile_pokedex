@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../models/pokemons_model.dart';
+import '../../models/pokemons/pokemons_model.dart';
 import './pokemon_stats.dart';
 import '../../controllers/specific_poke_controller.dart';
 import 'package:get/get.dart';

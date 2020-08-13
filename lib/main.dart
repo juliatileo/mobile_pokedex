@@ -4,9 +4,6 @@ import './themes/theme_data.dart';
 import 'widgets/drawer.dart';
 import 'widgets/category.dart';
 import 'screens/pokemons/pokemons.dart';
-import 'screens/berries.dart';
-import 'screens/moves.dart';
-import 'screens/itens.dart';
 
 void main() {
   runApp(MyApp());
@@ -72,42 +69,18 @@ class _PokedexState extends State<Pokedex> {
                       ),
                     ),
                     Container(
-                      height: 300,
+                      height: 400,
                       padding: EdgeInsets.all(30),
                       child: ListView(
                         padding: EdgeInsets.zero,
-                        scrollDirection: Axis.horizontal,
                         children: <Widget>[
                           Categories(
                               color: Color(0xffcf305a),
-                              imageUrl:
-                                  'https://lh4.googleusercontent.com/-I0RQsfGZA-E/AAAAAAAAAAI/AAAAAAAAA7A/AMZuuclsn97ZJ_n0Pj12N7RiQqHerB_6jA/s88/photo.jpg',
+                              imageUrl: 'https://pngimg.com/uploads/pokemon/pokemon_PNG154.png',
                               categoryTitle: 'Pokémons',
                               navigateTo: () {
                                 Get.to(Pokemons());
                               }),
-                          Categories(
-                              color: Color(0xff7530cf),
-                              imageUrl: 'https://pokemonfaqs.com/wp-content/uploads/2020/04/enigma_berry.png',
-                              categoryTitle: 'Berries',
-                              navigateTo: () {
-                                Get.to(Berries());
-                              }),
-                          Categories(
-                              color: Color(0xffe37452),
-                              imageUrl: 'https://image.flaticon.com/icons/png/512/35/35837.png',
-                              categoryTitle: 'Moves',
-                              navigateTo: () {
-                                Get.to(Moves());
-                              }),
-                          Categories(
-                              color: Color(0xff3087cf),
-                              imageUrl:
-                                  'https://static.wikia.nocookie.net/international-pokedex/images/9/9a/Macho_Brace.png/revision/latest/scale-to-width-down/340?cb=20190508182400',
-                              categoryTitle: 'Itens',
-                              navigateTo: () {
-                                Get.to(Itens());
-                              })
                         ],
                       ),
                     ),

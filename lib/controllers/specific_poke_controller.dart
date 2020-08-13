@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'dart:convert';
-import '../models/specfic_pokemons/specific_pokemon_model.dart';
+import '../models/pokemons/specfic_pokemons/specific_pokemon_model.dart';
 import 'package:http/http.dart' as http;
 
 class SpecificPokeController extends GetxController {

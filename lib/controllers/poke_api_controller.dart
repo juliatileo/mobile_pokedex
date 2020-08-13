@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import '../models/pokemons_model.dart';
+import '../models/pokemons/pokemons_model.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
