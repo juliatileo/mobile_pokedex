@@ -5,4 +5,4 @@ Mobile pokedex was developed using Flutter
 # Others
 Flutter: https://flutter.dev
 
-PokeAPI:https://pokeapi.co/
+PokeAPI: https://pokeapi.co/
